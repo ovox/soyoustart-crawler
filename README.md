@@ -1,7 +1,26 @@
 soyoustart-crawler
 ==================
 
+What is it?:
+------------
+
 This is a quick and gritty script that I threw together because I was bored of missing out on the new servers at SoYouStart. I am aware that it is terrible, but it works.
+
+Prerequisites:
+--------------
+
+The first prerequisite is that you read the script and understand what it does.
+
+The second is ensuring the place you're running the script from can email out.
+
+After that some basic things should be installed:
+
+bash
+curl
+grep
+
+Installation:
+-------------
 
 To run the script, you simply need to download the file, or copy and paste it, into a new location, and chmod it. I used one of my servers for monitoring since I could be assured that it wouldn't be offline.
 
@@ -20,3 +39,13 @@ You then need to change the line in the script similar to the following:
 This basically get's the 'order form' page of the server you're interested in. When the server is not available this prints an error page, including "Le paramètre est invalide".
 
 Update any mention of the codename you desire in the script, and change the line "mail -s E3-SSD-1 <Your Email>" to your email address. You may have to allow email from your server if it gets marked as spam.
+
+Contact:
+--------
+
+If you'd like to get in touch, feel free to send me a message.
+
+Contribution:
+-------------
+
+I can't imagine this is relevent, but contributions are welcome.
