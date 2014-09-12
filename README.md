@@ -2,3 +2,21 @@ soyoustart-crawler
 ==================
 
 This is a quick and gritty script that I threw together because I was bored of missing out on the new servers at SoYouStart. I am aware that it is terrible, but it works.
+
+To run the script, you simply need to download the file, or copy and paste it, into a new location, and chmod it. I used one of my servers for monitoring since I could be assured that it wouldn't be offline.
+
+After you have made the file executable, it would be a good idea to set up a cronjob to check the site.
+
+SoYouStart servers sell extremely quickly, so you will want to set the timer to something like the following:
+
+<code> */5 * * * * root /home/adam/soyoustart-crawler.bash </code>
+
+In the script currently it monitors three different servers: E3-SSD-1, E3-SSD-2, E3-SSD-3. This can be changed to monitor whichever SoYouStart server you wish, but you sill need to find the system codename (e.g. 143sys10 is E3-SSD-2) which can be obtained by wget'ing the entire page http://www.soyoustart.com/en/essential-servers/ and locating the system you are after, the codename is sprinkled around the code.
+
+You then need to change the line in the script similar to the following:
+
+<code> curl -silent https://eu.soyoustart.com/en/cgi-bin/newOrder/order.cgi?hard=143sys10 > /tmp/143sys10 && </code>
+
+This basically get's the 'order form' page of the server you're interested in. When the server is not available this prints an error page, including "Le paramètre est invalide".
+
+Update any mention of the codename you desire in the script, and change the email location to your email.
