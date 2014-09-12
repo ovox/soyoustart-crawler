@@ -14,13 +14,13 @@ UNAVAILABLE3=`grep -i "invalide" /tmp/143sys11`
 echo $UNAVAILABLE
 
 if [ -z "$UNAVAILABLE" ]; then
-                echo "E3-SSD-1 is now available!" | mail -s E3-SSD-1 adamkennethdean@me.com
+                echo "E3-SSD-1 is now available!" | mail -s E3-SSD-1 <Your Email>
 
 elif [ -z "$UNAVAILABLE2" ]; then
-                echo "E3-SSD-2 is now available!" | mail -s E3-SSD-2 adamkennethdean@me.com
+                echo "E3-SSD-2 is now available!" | mail -s E3-SSD-2 <Your Email>
 
 elif [ -z "$UNAVAILABLE3" ]; then
-                echo "E3-SSD-3 is now available!" | mail -s E3-SSD-3 adamkennethdean@me.com
+                echo "E3-SSD-3 is now available!" | mail -s E3-SSD-3 <Your Email>
 
 else
                 echo "Lame, None of the monitored servers are available." 
