@@ -19,4 +19,4 @@ You then need to change the line in the script similar to the following:
 
 This basically get's the 'order form' page of the server you're interested in. When the server is not available this prints an error page, including "Le paramètre est invalide".
 
-Update any mention of the codename you desire in the script, and change the email location to your email.
+Update any mention of the codename you desire in the script, and change the line "mail -s E3-SSD-1 <Your Email>" to your email address. You may have to allow email from your server if it gets marked as spam.
