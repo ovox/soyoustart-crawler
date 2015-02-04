@@ -1,6 +1,9 @@
 soyoustart-crawler
 ==================
 
+Adapted from @Simnol
+--------------------
+
 What is it?:
 ------------
 
@@ -18,6 +21,8 @@ After that some basic things should be installed:
 bash
 curl
 grep
+
+You will also need a Pushbullet api token which you can get from the Pushbullet website for free.
 
 Installation:
 -------------
