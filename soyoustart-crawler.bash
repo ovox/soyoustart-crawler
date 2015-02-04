@@ -1,30 +1,14 @@
 #!/bin/bash
-curl -silent https://eu.soyoustart.com/en/cgi-bin/newOrder/order.cgi?hard=143sys13 > /tmp/143sys13 &&
-
-curl -silent https://eu.soyoustart.com/en/cgi-bin/newOrder/order.cgi?hard=143sys10 > /tmp/143sys10 &&
-
-curl -silent https://eu.soyoustart.com/en/cgi-bin/newOrder/order.cgi?hard=143sys11 > /tmp/143sys11 &&
+curl -silent https://eu.soyoustart.com/en/cgi-bin/newOrder/order.cgi?hard=143sys6 > /tmp/143sys13 &&
 
 UNAVAILABLE=`grep -i "invalide" /tmp/143sys13`
-
-UNAVAILABLE2=`grep -i "invalide" /tmp/143sys10`
-
-UNAVAILABLE3=`grep -i "invalide" /tmp/143sys11`
 
 echo $UNAVAILABLE
 
 if [ -z "$UNAVAILABLE" ]; then
-                echo "E3-SSD-1 is now available!" | mail -s E3-SSD-1 <Your Email>
-
-elif [ -z "$UNAVAILABLE2" ]; then
-                echo "E3-SSD-2 is now available!" | mail -s E3-SSD-2 <Your Email>
-
-elif [ -z "$UNAVAILABLE3" ]; then
-                echo "E3-SSD-3 is now available!" | mail -s E3-SSD-3 <Your Email>
-
+		echo "Sys 5 is available!!" | curl -u <YOUR-PUSHBULLET-TOKEN>: -X POST https://api.pushbullet.com/v2/pushes --header 'Content-Type: application/json' --data-binary '{"type": "note", "title": "Quick, buy server", "body": "Sys 5 is available"}'
 else
-                echo "Lame, None of the monitored servers are available." 
-
+		echo "Sys 5 is not available :("
 fi
 
 rm /tmp/143*
