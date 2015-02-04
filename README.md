@@ -3,6 +3,7 @@ soyoustart-crawler
 
 Adapted from @Simnol
 --------------------
+I've adapted @Simnol's script to do pushbullet notifications, easy and elegant way to get notifications on all your devices without using mail
 
 What is it?:
 ------------
