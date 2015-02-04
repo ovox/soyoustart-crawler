@@ -1,7 +1,7 @@
 #!/bin/bash
-curl -silent https://eu.soyoustart.com/en/cgi-bin/newOrder/order.cgi?hard=143sys6 > /tmp/143sys13 &&
+curl -silent https://eu.soyoustart.com/en/cgi-bin/newOrder/order.cgi?hard=143sys6 > /tmp/143sys6 &&
 
-UNAVAILABLE=`grep -i "invalide" /tmp/143sys13`
+UNAVAILABLE=`grep -i "invalide" /tmp/143sys6`
 
 echo $UNAVAILABLE
 
